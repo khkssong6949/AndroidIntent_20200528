@@ -43,5 +43,22 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+         intBtn.setOnClickListener {
+
+            val myUri = Uri.parse("https://naver.com") // 인터넷 주소 직접 입력
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+
+        }
+
+
+        playBtn.setOnClickListener {
+
+            val myUri = Uri.parse("market://details?id=플레이스토어ID") // 인터넷 주소 직접 입력
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
+
+        }
+
     }
 }
