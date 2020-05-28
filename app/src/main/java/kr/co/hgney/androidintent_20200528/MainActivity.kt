@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
             val phoneNum = phoneNumEdt.text.toString()
 
-            val myUri = Uri.parse("tel:01062444943")
+            val myUri = Uri.parse("tel:${phoneNum.replace("-","")}")
             val myIntent = Intent(Intent.ACTION_DIAL, myUri)
             startActivity(myIntent)
 
